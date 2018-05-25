@@ -110,6 +110,17 @@ body, .app {
   font-size: 0;
 }
 
+.upload {
+  display: block;
+  width: 73px;
+  background: white;
+  background-image: url('./icons/upload-file.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px;
+  font-size: 0;
+}
+
 .showing-contacts {
   text-align: center;
   margin: 20px 0;

@@ -50,6 +50,10 @@ class ListContacts extends Component {
             to='/create'
             className='add-contact'
           >Add Contact</Link>
+          <Link
+            to='/upload'
+            className='upload'
+          >Add Contact</Link>
         </div>
 
         {showingContacts.length !== contacts.length && (

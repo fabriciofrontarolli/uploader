@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import ListContacts from './ListContacts'
 import CreateContact from './CreateContact'
+import UploadFile from './UploadFile'
 import * as ContactsAPI from './utils/ContactsAPI'
 
 class App extends Component {
@@ -29,6 +30,10 @@ class App extends Component {
     })
   }
 
+  uploadFile(file) {
+    console.log('success');
+  }
+
   render() {
     return (
       <div>
@@ -42,6 +47,14 @@ class App extends Component {
           <CreateContact
             onCreateContact={(contact) => {
               this.createContact(contact)
+              history.push('/')
+            }}
+          />
+        )}/>
+        <Route path='/upload' render={({ history }) => (
+          <UploadFile
+            onUploadeSuccess={(file) => {
+              this.uploadFile(file)
               history.push('/')
             }}
           />
